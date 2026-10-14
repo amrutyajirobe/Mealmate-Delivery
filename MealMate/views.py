@@ -5,4 +5,12 @@ from django.shortcuts import render
 
 
 def hello(request):
-    return render(request, 'index.html')
+    return render(request, 'delivery/index.html')
+
+
+def open_signup(request):
+    return render(request, 'delivery/signup.html')
+
+
+def open_signin(request):
+    return render(request, 'delivery/signin.html')
