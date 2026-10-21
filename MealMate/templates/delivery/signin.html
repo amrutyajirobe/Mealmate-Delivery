@@ -3,11 +3,15 @@
 
 <head>
 
-    <title>Sign IN</title>
+    <title>SIGN IN</title>
 </head>
 
 <body>
     <h3>SIGN IN below:</h3>
+
+    {% if error %}
+        <p style="color: red; font-weight: bold;">{{ error }}</p>
+    {% endif %}
 
     <form action="{% url 'signin' %}" method="post">
         {% csrf_token %}
